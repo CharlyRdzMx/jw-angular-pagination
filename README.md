@@ -1,5 +1,7 @@
 # jw-angular-pagination
 
-Angular Pagination Component
+Angular Pagination Component (Español)
 
-Usage instructions available at https://jasonwatmore.com/post/2018/04/26/npm-jw-angular-pagination-component
+Original component usage instructions available at https://jasonwatmore.com/post/2018/04/26/npm-jw-angular-pagination-component
+
+Este componente contiene algunos agregados para el funcionamiento de la paginación.
