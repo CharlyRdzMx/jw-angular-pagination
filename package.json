@@ -1,6 +1,6 @@
 {
-  "name": "jw-angular-pagination",
-  "version": "0.0.0",
+  "name": "jw-angular-pagination-ext",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

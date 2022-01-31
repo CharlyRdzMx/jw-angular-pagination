@@ -1,4 +1,4 @@
-# jw-angular-pagination
+# jw-angular-pagination-ext
 
 Angular Pagination Component
 

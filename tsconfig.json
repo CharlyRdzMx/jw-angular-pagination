@@ -18,8 +18,8 @@
     ],
     "paths": {
       "jw-pagination": [
-        "dist/jw-pagination/jw-pagination",
-        "dist/jw-pagination"
+        "dist/jw-pagination-ext/jw-pagination-ext",
+        "dist/jw-pagination-ext"
       ]
     }
   },

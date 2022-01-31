@@ -3,22 +3,22 @@ import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChange
 import paginate from 'jw-paginate';
 
 @Component({
-    selector: 'jw-pagination',
+    selector: 'jw-pagination-ext',
     template: `<ul *ngIf="pager.pages && pager.pages.length" class="pagination">
     <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item first-item">
-        <a (click)="setPage(1)" class="page-link">First</a>
+        <a (click)="setPage(1)" class="page-link">Primera</a>
     </li>
     <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item previous-item">
-        <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
+        <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previa</a>
     </li>
     <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item number-item">
         <a (click)="setPage(page)" class="page-link">{{page}}</a>
     </li>
     <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item next-item">
-        <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
+        <a (click)="setPage(pager.currentPage + 1)" class="page-link">Sigiente</a>
     </li>
     <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item last-item">
-        <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
+        <a (click)="setPage(pager.totalPages)" class="page-link">Última</a>
     </li>
 </ul>`
 })
@@ -54,6 +54,6 @@ export class JwPaginationComponent implements OnInit, OnChanges {
         var pageOfItems = this.items.slice(this.pager.startIndex, this.pager.endIndex + 1);
 
         // call change page function in parent component
-        this.changePage.emit(pageOfItems);
+        this.changePage.emit({currentPage: pageOfItems, pageOfItems: pageOfItems});
     }
 }

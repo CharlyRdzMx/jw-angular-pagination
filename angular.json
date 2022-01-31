@@ -5,36 +5,36 @@
   "projects": {
     "jw-pagination": {
       "projectType": "library",
-      "root": "projects/jw-pagination",
-      "sourceRoot": "projects/jw-pagination/src",
+      "root": "projects/jw-pagination-ext",
+      "sourceRoot": "projects/jw-pagination-ext/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/jw-pagination/tsconfig.lib.json",
-            "project": "projects/jw-pagination/ng-package.json"
+            "tsConfig": "projects/jw-pagination-ext/tsconfig.lib.json",
+            "project": "projects/jw-pagination-ext/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/jw-pagination/tsconfig.lib.prod.json"
+              "tsConfig": "projects/jw-pagination-ext/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/jw-pagination/src/test.ts",
-            "tsConfig": "projects/jw-pagination/tsconfig.spec.json",
-            "karmaConfig": "projects/jw-pagination/karma.conf.js"
+            "main": "projects/jw-pagination-ext/src/test.ts",
+            "tsConfig": "projects/jw-pagination-ext/tsconfig.spec.json",
+            "karmaConfig": "projects/jw-pagination-ext/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/jw-pagination/tsconfig.lib.json",
-              "projects/jw-pagination/tsconfig.spec.json"
+              "projects/jw-pagination-ext/tsconfig.lib.json",
+              "projects/jw-pagination-ext/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -43,5 +43,5 @@
         }
       }
     }},
-  "defaultProject": "jw-pagination"
+  "defaultProject": "jw-pagination-ext"
 }

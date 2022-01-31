@@ -1,10 +1,10 @@
 {
-    "name": "jw-angular-pagination",
+    "name": "jw-angular-pagination-ext",
     "version": "1.2.0",
     "homepage": "https://jasonwatmore.com/post/2018/04/26/npm-jw-angular-pagination-component",
     "repository": {
         "type": "git",
-        "url": "https://github.com/cornflourblue/jw-angular-pagination.git"
+        "url": "https://github.com/CharlyRdzMx/jw-angular-pagination.git"
     },
     "peerDependencies": {
         "@angular/common": "^9.1.11",
