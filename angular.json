@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jw-pagination": {
+    "jw-pagination-ext": {
       "projectType": "library",
       "root": "projects/jw-pagination-ext",
       "sourceRoot": "projects/jw-pagination-ext/src",

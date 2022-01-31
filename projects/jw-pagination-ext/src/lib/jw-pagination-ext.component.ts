@@ -4,7 +4,7 @@ import paginate from 'jw-paginate';
 
 @Component({
     selector: 'jw-pagination-ext',
-    template: `<ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+    template: `<ul *ngIf="pager.pages && pager.pages.length" class="pagination" style="cursor:pointer;">
     <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item first-item">
         <a (click)="setPage(1)" class="page-link">Primera</a>
     </li>
@@ -23,7 +23,7 @@ import paginate from 'jw-paginate';
 </ul>`
 })
 
-export class JwPaginationComponent implements OnInit, OnChanges {
+export class JwPaginationExtComponent implements OnInit, OnChanges {
     @Input() items: Array<any>;
     @Output() changePage = new EventEmitter<any>(true);
     @Input() initialPage = 1;
@@ -40,6 +40,11 @@ export class JwPaginationComponent implements OnInit, OnChanges {
     }
 
     ngOnChanges(changes: SimpleChanges) {
+        
+        if (changes.items.currentValue == undefined){
+            return;
+        }
+        
         // reset page if items array has changed
         if (changes.items.currentValue !== changes.items.previousValue) {
             this.setPage(this.initialPage);
@@ -54,6 +59,6 @@ export class JwPaginationComponent implements OnInit, OnChanges {
         var pageOfItems = this.items.slice(this.pager.startIndex, this.pager.endIndex + 1);
 
         // call change page function in parent component
-        this.changePage.emit({currentPage: pageOfItems, pageOfItems: pageOfItems});
+        this.changePage.emit({currentPage: page, pageOfItems: pageOfItems});
     }
 }
