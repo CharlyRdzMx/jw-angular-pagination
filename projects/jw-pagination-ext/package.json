@@ -4,7 +4,7 @@
     "homepage": "https://jasonwatmore.com/post/2018/04/26/npm-jw-angular-pagination-component",
     "repository": {
         "type": "git",
-        "url": "https://github.com/CharlyRdzMx/jw-angular-pagination.git"
+        "url": "https://github.com/CharlyRdzMx/jw-angular-pagination-ext.git"
     },
     "peerDependencies": {
         "@angular/common": "^9.1.11",

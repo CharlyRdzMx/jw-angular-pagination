@@ -17,7 +17,7 @@
       "dom"
     ],
     "paths": {
-      "jw-pagination": [
+      "jw-pagination-ext": [
         "dist/jw-pagination-ext/jw-pagination-ext",
         "dist/jw-pagination-ext"
       ]
